@@ -7,102 +7,103 @@
     <link rel="stylesheet" href="home.css">
 </head>
 
-<nav>
-    <h1>Black Market</h1>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+<body>
+
+<header>
+    <div class="logo">Black Market</div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <section class="hero">
-    <h2>Black Market</h2>
-    <p>Spend. Earn. Repeat.
+    <div class="hero-text">
+        <h1>Black Market</h1>
+        <p>Spend. Earn. Repeat.<br>
         Simple rewards. Zero complications.</p>
-    <button>Shop Now</button>
+        <button>Shop Now</button>
+    </div>
 </section>
 
-<section class="products">
-    <h2>Featured Products</h2>
-    <div class="product-grid">
+<!-- SHOP SECTION -->
+<section class="shop">
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
+    <!-- LEFT SIDEBAR -->
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+            <h3>Category</h3>
+            <div class="category-box">
+                <a href="headset.html" class="category-item">Headsets</a>
+                <a href="mice.html" class="category-item">Mice</a>
+                <a href="keyboards.html" class="category-item">Keyboards</a>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Mouse</h3>
-            <p class="price">$29.99</p>
-            <button>Add to Cart</button>
+        <div class="filter-group">
+            <h3>Max Price</h3>
+            <div class="price-box">
+                <input type="range" id="priceRange" min="0" max="200" value="200">
+                <div class="price-display">
+                    $0 — $<span id="priceValue">200</span>
+                </div>
+            </div>
         </div>
+    </aside>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Mechanical Keyboard</h3>
-            <p class="price">$89.99</p>
-            <button>Add to Cart</button>
+    <!-- RIGHT PRODUCTS -->
+    <section class="products">
+        <h2>Featured Products</h2>
+
+        <div class="product-grid">
+
+            <div class="card">
+                <img src="image1.jpg" alt="">
+                <h3>Product Name</h3>
+                <p class="price">$199</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="image2.jpg" alt="">
+                <h3>Product Name</h3>
+                <p class="price">$99</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="image2.jpg" alt="">
+                <h3>Product Name</h3>
+                <p class="price">$99</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="card">
+                <img src="image2.jpg" alt="">
+                <h3>Product Name</h3>
+                <p class="price">$99</p>
+                <button>Add to Cart</button>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-        <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="">
-            <h3>Gaming Headset</h3>
-            <p class="price">$49.99</p>
-            <button>Add to Cart</button>
-        </div>
-
-    </div>
 </section>
 
 <footer>
     © 2026 Black Market
 </footer>
+
+<script>
+const range = document.getElementById("priceRange");
+const priceValue = document.getElementById("priceValue");
+range.oninput = () => priceValue.textContent = range.value;
+</script>
 
 </body>
 </html>
