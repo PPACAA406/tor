@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Cards</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Black Market</div>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Black Market</h1>
+        <p>Spend. Earn. Repeat.<br>
+        Simple rewards. Zero complications.</p>
+        <button>Shop Now</button>
+    </div>
+</section>
+
+<!-- SHOP SECTION -->
+<section class="shop">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="filters">
+        <h2>Filters</h2>
+
+        <div class="filter-group">
+            <h3>Category</h3>
+            <div class="category-box">
+                <a href="cc.html" class="category-item">Credit Cards (12) </a>
+                <a href="giftcard.html" class="category-item">Gift Cards (7)</a>
+                <a href="guns.html" class="category-item">Guns (8)</a>
+                <a href="drugs.html" class="category-item">Drugs (8)</a>
+                <a href="documents.html" class="category-item">Documents</a>
+                <a href="paypal.html" class="category-item">PayPal</a>
+                <a href="bank.html" class="category-item">Bank Notes</a>
+            </div>
+        </div>
+        
+        <div class="filter-group">
+            <h3>Max Price</h3>
+            <div class="price-box">
+                <input type="range" id="priceRange" min="0" max="200" value="200">
+                <div class="price-display">
+                    $0 — $<span id="priceValue">200</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- RIGHT PRODUCTS -->
+    <section class="products">
+        <h2>Documents</h2>
+
+        <div class="product-grid">
+
+            <div class="card">
+                <img src="fakeid.png" alt="">
+                <h3>Fake ID</h3>
+                <p class="price">$199</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card">
+                <img src="driving.png" alt="">
+                <h3>Driving License</h3>
+                <p class="price">$99</p>
+                <button>Buy Now</button>
+            </div>
+
+            <div class="card">
+                <img src="passaport.jpg" alt="">
+                <h3>Fake passaport</h3>
+                <p class="price">$99</p>
+                <button>Buy Now</button>
+            </div>
+
+        
+        </div>
+    </section>
+
+</section>
+
+<footer>
+    © 2026 Black Market
+</footer>
+
+<script>
+const range = document.getElementById("priceRange");
+const priceValue = document.getElementById("priceValue");
+range.oninput = () => priceValue.textContent = range.value;
+</script>
+
+</body>
+</html>
